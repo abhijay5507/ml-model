@@ -1,5 +1,7 @@
 import pandas as pd
 import yfinance as yf
+import requests
+from datetime import datetime
 
 def fetch_stock_data(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
     df= yf.download(ticker, start=start_date, end=end_date, progress=False)
@@ -12,6 +14,10 @@ def fetch_stock_data(ticker: str, start_date: str, end_date: str) -> pd.DataFram
     df.index.name= 'Date'
 
     return df
+
+def fetch_wikipedia_views(article_title: str, start_date: str, end_date:str) -> pd.DataFrame:
+    start_fmt= datetime.strptime(start_date, "%Y-%m-%d").strftime("%Y%m%d00")
+    
 
 if __name__ == "__main__":
     test_ticker = "TSLA"
