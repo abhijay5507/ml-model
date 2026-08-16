@@ -21,3 +21,13 @@ def create_lagged_features(stock_df: pd.DataFrame, wiki_df: pd.DataFrame) -> pd.
 
     return clean_df
 
+def train_chronological_model(df: pd.DataFrame,train_ratio: float=0.8):
+    feature_cols=['Prev_Close','Prev_Volumes','Prev_Wiki_Views','MA_7_Close','MA_14_Close']
+    X= df[feature_cols]
+    y= df['Target_Close']
+
+    split_index= int(len(df)*train_ratio)
+    X_train, X_test = X.iloc[:split_index], X.iloc[split_index:]
+    y_train, y_test = y.iloc[:split_index], y.iloc[split_index:]
+
+    
