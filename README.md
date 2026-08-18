@@ -1,7 +1,5 @@
 # ml-model
-# Kassandra Predictive Analytics Engine
-
-![c#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=c-sharp&logoColor=white) ![unity](https://img.shields.io/badge/Unity-%23000000.svg?style=flat&logo=unity&logoColor=white)
+# Predictive Analytics Engine
 
 ## 📝 Description
 The Predictive Analytics Engine integrates diverse data sources including financial market data, public interest metrics (Wikipedia views), and real-time news sentiment. It provides a robust machine learning pipeline for feature engineering and chronological model training, aiming to forecast trends and offer valuable insights based on combined historical and current information.
